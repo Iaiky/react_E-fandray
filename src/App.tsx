@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Nav from "./components/Nav/Nav"
+import ChatBody from "./components/chatBody/ChatBody"
+import UserProfile from './components/userProfile/UserProfile';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+type MyProps = {
+    // using `interface` is also ok
+    
+  };
+  type MyState = {
+    count: number; // like this
+  };
+  class App extends React.Component<MyProps> {
+    render() {
+      return (
+        <div className= "__main">
+          <Nav />
+          <ChatBody />
+          <UserProfile />
+        </div>
+      );
+    }
+  }
+
+  export default App;
